@@ -7,6 +7,7 @@ export default function Home() {
     return (
         <Fragment>
             <Hero />
+            <FeaturedPosts />
         </Fragment>
     )
 }
