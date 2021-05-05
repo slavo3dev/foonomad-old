@@ -1,7 +1,9 @@
 import {Fragment} from "react";
 import { Hero, FeaturedPosts } from "../componets"
-function HomePage() {
-    
+
+
+
+export default function Home() {    
     return (
         <Fragment>
             <Hero />
@@ -10,4 +12,3 @@ function HomePage() {
     )
 }
 
-export default HomePage()
