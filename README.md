@@ -1,2 +1,2 @@
-# foonomad
-# Blog - NextJS &amp; MongoDB
+# www.foonomad.com
+#### Blog - NextJS &amp; MongoDB
