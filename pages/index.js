@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-
+import { Hero, FeaturedPosts } from "../componets"
 function HomePage() {
     
     return (
