@@ -1,5 +1,5 @@
 import {LayoutComponent} from "./Layoutcomponent"
 import {Logo} from "./Logo"
-import {Navigation} from "./Navigation"
+import {MainNavigation} from "./Navigation"
 
-export { LayoutComponent, Logo, Navigation}
+export { LayoutComponent, Logo, MainNavigation}

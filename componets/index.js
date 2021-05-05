@@ -1,6 +1,6 @@
 import {Hero} from "./Hero"
 import {FeaturedPosts} from "./FeaturedPosts"
-import { LayoutComponent, Logo, Navigation  } from "./layout"
+import { LayoutComponent, Logo, MainNavigation  } from "./layout"
 
 
 export {
@@ -8,5 +8,5 @@ export {
     FeaturedPosts,
     LayoutComponent,
     Logo,
-    Navigation
+    MainNavigation
 }
