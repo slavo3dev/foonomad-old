@@ -1,6 +1,11 @@
-import "./featuredposts.module.css"
+import classes from "./featuredposts.module.css"
 
 export function FeaturedPosts() {
     
-    return <h1>featured posts</h1>
+    return (
+        <section className={classes.latest}>
+            <h2>Featured Posts</h2>
+            A list of posts
+        </section>
+    )
 }
