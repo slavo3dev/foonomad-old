@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-import {MainNavigation} from "../navigation";
+import {MainNavigation} from "../MainNavigation";
 
 
 export function LayoutComponent(props) {

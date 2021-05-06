@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  --color-grey-50: hsl(265, 55%, 96%);
-  --color-grey-100: hsl(265, 19%, 88%);
-  --color-grey-200: hsl(265, 7%, 70%);
-  --color-grey-300: hsl(265, 6%, 66%);
-  --color-grey-400: hsl(265, 4%, 57%);
-  --color-grey-500: hsl(265, 3%, 53%);
-  --color-grey-600: hsl(265, 4%, 42%);
-  --color-grey-700: hsl(265, 4%, 31%);
-  --color-grey-800: hsl(276, 5%, 20%);
-  --color-grey-900: hsl(280, 5%, 13%);
+  --color-grey-50: hsl(214, 55%, 96%);
+  --color-grey-100: hsl(214, 19%, 88%);
+  --color-grey-200: hsl(214, 7%, 70%);
+  --color-grey-300: hsl(214, 6%, 66%);
+  --color-grey-400: hsl(214, 4%, 57%);
+  --color-grey-500: hsl(214, 3%, 53%);
+  --color-grey-600: hsl(214, 4%, 42%);
+  --color-grey-700: hsl(214, 4%, 31%);
+  --color-grey-800: hsl(214, 5%, 20%);
+  --color-grey-900: hsl(214, 6%, 13%);
 
   --color-primary-50: #c8b3ce;
   --color-primary-100: #a07aaa;
@@ -43,15 +43,15 @@ body {
   --size-40: 10rem;
 
   margin: 0;
-  background-color: var(--color-grey-500);
-  color: #252525;
-  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-grey-100);
+  color: #346aaf;
+  font-family: "Roboto", sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Oswald', 'Roboto', sans-serif;
+  font-family: "Oswald", "Roboto", sans-serif;
 }
 
 a {
