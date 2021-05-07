@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { PostHeader } from "../Post/postheader";
+import { PostHeader } from "../PostHeader";
+import classes from "./postcontent.module.css";
 
 const DummyPost = {
   slug: "digital-nomad-pack",
@@ -14,7 +15,7 @@ export function PostContent() {
 
   const imagePath = `/images/posts/${slug}/${image}`;
   return (
-    <article>
+    <article className={classes.content}>
       <PostHeader title={title} image={imagePath} />
       {content}
     </article>
