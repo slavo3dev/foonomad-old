@@ -1,7 +1,7 @@
 import { Hero } from "./Hero";
 import { FeaturedPosts } from "./FeaturedPosts";
 import { LayoutComponent, Logo, MainNavigation } from "./layout";
-import { PostsGrid, AllPosts } from "./Posts";
+import { PostsGrid, AllPosts, PostContent } from "./Posts";
 
 export {
   Hero,
@@ -11,4 +11,5 @@ export {
   MainNavigation,
   PostsGrid,
   AllPosts,
+  PostContent,
 };
