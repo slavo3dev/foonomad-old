@@ -1,3 +1,4 @@
-import {PostsGrid} from "./Postsgrid"
+import { PostsGrid } from "./Postsgrid";
+import { AllPosts } from "./AllPosts";
 
-export {PostsGrid}
+export { PostsGrid, AllPosts };

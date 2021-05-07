@@ -6,15 +6,15 @@
 
 body {
   --color-grey-50: hsl(214, 55%, 96%);
-  --color-grey-100: hsl(214, 19%, 88%);
-  --color-grey-200: hsl(214, 7%, 70%);
-  --color-grey-300: hsl(214, 6%, 66%);
-  --color-grey-400: hsl(214, 4%, 57%);
-  --color-grey-500: hsl(214, 3%, 53%);
-  --color-grey-600: hsl(214, 4%, 42%);
-  --color-grey-700: hsl(214, 4%, 31%);
-  --color-grey-800: hsl(214, 5%, 20%);
-  --color-grey-900: hsl(214, 6%, 13%);
+  --color-blue-100: hsl(210, 10%, 90%);
+  --color-blue-200: hsl(210, 10%, 40%);
+  --color-blue-300: hsl(210, 20%, 40%);
+  --color-blue-400: hsl(210, 50%, 40%);
+  --color-blue-500: hsl(210, 60%, 40%);
+  --color-blue-600: hsl(210, 70%, 40%);
+  --color-blue-700: hsl(210, 80%, 40%);
+  --color-blue-800: hsl(210, 90%, 40%);
+  --color-blue-900: hsl(210, 100%, 40%);
 
   --color-primary-50: #c8b3ce;
   --color-primary-100: #a07aaa;
@@ -23,7 +23,7 @@ body {
   --color-primary-400: #732392;
   --color-primary-500: #5a097a;
   --color-primary-600: #480264;
-  --color-primary-700: #3d0264;
+  --color-primary-700: #346aaf;
 
   --color-success-100: #a2f0bc;
   --color-success-500: #12bd4b;
@@ -43,7 +43,7 @@ body {
   --size-40: 10rem;
 
   margin: 0;
-  background-color: var(--color-grey-100);
+  background-color: var(--color-grey-50);
   color: #346aaf;
   font-family: "Roboto", sans-serif;
 }
