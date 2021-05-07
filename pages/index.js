@@ -1,20 +1,28 @@
+import PropTypes from "prop-types";
 import { Fragment } from "react";
 import { Hero, FeaturedPosts } from "../componets";
+import { getFeaturedPosts } from "../lib/posts-util";
 
-export default function Home() {
-  const DummyData = [
-    {
-      slug: "digital-nomad-pack",
-      title: "Digital Nomad Pack",
-      image: "digital-nomad-pack.png",
-      excerpt: "Online Business that you can work remotly",
-      date: "2021-5-5",
-    },
-  ];
+export default function Home(props) {
+  const { posts } = props;
   return (
     <Fragment>
       <Hero />
-      <FeaturedPosts posts={DummyData} />
+      <FeaturedPosts posts={posts} />
     </Fragment>
   );
 }
+
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
+
+  return {
+    props: {
+      posts: featuredPosts,
+    },
+  };
+}
+
+Home.propTypes = {
+  posts: PropTypes.object,
+};
