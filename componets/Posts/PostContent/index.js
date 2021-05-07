@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import ReactMarkdown from "react-markdown";
 import { PostHeader } from "../PostHeader";
 import classes from "./postcontent.module.css";
 
@@ -17,7 +18,7 @@ export function PostContent() {
   return (
     <article className={classes.content}>
       <PostHeader title={title} image={imagePath} />
-      {content}
+      <ReactMarkdown>{content}</ReactMarkdown>
     </article>
   );
 }
