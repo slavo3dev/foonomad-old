@@ -1,17 +1,20 @@
 import { AllPosts } from "../../componets";
+import { getAllPosts } from "../../lib";
+import PropTypes from "prop-types";
 
-const DummyData = [
-  {
-    slug: "digital-nomad-pack",
-    title: "Digital Nomad Pack",
-    image: "digital-nomad-pack.png",
-    excerpt: "Online Business that you can work remotly",
-    date: "2021-5-5",
-  },
-];
-
-function AllPostPage() {
-  return <AllPosts posts={DummyData} />;
+function AllPostPage(props) {
+  const { posts } = props;
+  return <AllPosts posts={posts} />;
 }
 
 export default AllPostPage;
+
+export function getStaticProps() {
+  const allPosts = getAllPosts();
+
+  return allPosts;
+}
+
+AllPostPage.propTypes = {
+  posts: PropTypes.object,
+};
