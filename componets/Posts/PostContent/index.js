@@ -3,16 +3,9 @@ import ReactMarkdown from "react-markdown";
 import { PostHeader } from "../PostHeader";
 import classes from "./postcontent.module.css";
 
-const DummyPost = {
-  slug: "digital-nomad-pack",
-  title: "Digital Nomad Pack",
-  image: "digital-nomad-pack.png",
-  date: "2021-5-5",
-  content: "# Online Business that you can work remotly",
-};
-
-export function PostContent() {
-  const { title, image, slug, content } = DummyPost;
+export function PostContent(props) {
+  const { post } = props;
+  const { title, image, slug, content } = post;
 
   const imagePath = `/images/posts/${slug}/${image}`;
   return (
@@ -24,5 +17,5 @@ export function PostContent() {
 }
 
 PostContent.propTypes = {
-  props: PropTypes.object || null,
+  props: PropTypes.object,
 };
