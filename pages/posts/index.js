@@ -1,5 +1,5 @@
 import { AllPosts } from "../../componets";
-import { getAllPosts } from "../../lib";
+import { getAllPosts } from "../../lib/posts-util";
 import PropTypes from "prop-types";
 
 export default function AllPostPage(props) {
@@ -10,9 +10,14 @@ export default function AllPostPage(props) {
 export function getStaticProps() {
   const allPosts = getAllPosts();
 
-  return allPosts;
+  return {
+    props: {
+      posts: allPosts,
+    },
+  };
 }
 
 AllPostPage.propTypes = {
-  posts: PropTypes.object,
+  props: PropTypes.object,
+  posts: PropTypes.array,
 };

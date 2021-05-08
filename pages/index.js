@@ -24,5 +24,5 @@ export function getStaticProps() {
 }
 
 Home.propTypes = {
-  posts: PropTypes.object,
+  props: PropTypes.object,
 };
