@@ -1,14 +1,12 @@
 ---
-  slug: "digital-nomad-pack"
-  title: "Digital Nomad Pack"
-  image: "digital-nomad-pack.png"
-  date: "2021-6-5"
-  excerpt: "Online Business that you can work remotly"
-  author: "Slavo_3"
-  isFeatured: true
+title: Mastering JavaScript
+excerpt: JavaScript is the most important programming language for web development. You probably don't know it well enough!
+image: mastering-js.png
+isFeatured: false
+date: "2021-10-30"
+slug: "mastering-js"
+author: "Slavo_3"
 ---
-
-# Digital Nomad Pack
 
 ### JavaScript powers the web - it's **the** most important programming language you need to know as a web developer.
 
@@ -24,6 +22,6 @@ function printBasics() {
 printBasics();
 ```
 
-![Create routes via your file + folder structure](digital-nomad-pack.png)
+![Create routes via your file + folder structure](mastering-js.png)
 
 ### Learn more about it [here](https://slavo3.com).

@@ -2,16 +2,39 @@ import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
 import { PostHeader } from "../PostHeader";
 import classes from "./postcontent.module.css";
-
+import Image from "next/image";
 export function PostContent(props) {
   const { post } = props;
   const { title, image, slug, content } = post;
 
   const imagePath = `/images/posts/${slug}/${image}`;
+  const customRenderers = {
+    p(paragraph) {
+      const { node } = paragraph;
+      console.log("NODE: ", node);
+      if (node.children[0].tagName === "img") {
+        const image = node.children[0];
+
+        return (
+          <div className={classes.image}>
+            <Image
+              src={`/images/posts/${post.slug}/${image.properties.src}`}
+              alt={image.alt}
+              width={600}
+              height={300}
+            />
+          </div>
+        );
+      }
+      return <p>{paragraph.children}</p>;
+    },
+  };
   return (
     <article className={classes.content}>
       <PostHeader title={title} image={imagePath} />
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers}>
+        {content}
+      </ReactMarkdown>
     </article>
   );
 }
