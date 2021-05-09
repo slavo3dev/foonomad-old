@@ -24,4 +24,4 @@ printBasics();
 
 ![Create routes via your file + folder structure](mastering-js.png)
 
-### Learn more about it [here](https://slavo3.com).
+### Learn more about it [here](https://www.enki.com)
