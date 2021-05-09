@@ -2,6 +2,7 @@ import { Hero } from "./Hero";
 import { FeaturedPosts } from "./FeaturedPosts";
 import { LayoutComponent, Logo, MainNavigation } from "./layout";
 import { PostsGrid, AllPosts, PostContent } from "./Posts";
+import { ContactForm } from "./Contact";
 
 export {
   Hero,
@@ -12,4 +13,5 @@ export {
   PostsGrid,
   AllPosts,
   PostContent,
+  ContactForm,
 };
