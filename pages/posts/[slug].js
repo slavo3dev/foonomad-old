@@ -3,7 +3,6 @@ import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 export default function PostPage(props) {
   const { post } = props;
-  console.log("PROPS Post component: ", props.post);
   return <PostContent post={post} />;
 }
 
