@@ -1,14 +1,14 @@
 export default function hendler(req, res) {
   if (req.method === "POST") {
-    const { email, name, message } = req.body;
+    const { email, name, message } = JSON.parse(req.body);
 
     if (
       !email ||
       !email.includes("@") ||
       !name ||
-      !name.trim() === "" ||
+      name.trim() === "" ||
       !message ||
-      !message.trim() === ""
+      message.trim() === ""
     ) {
       res.send(422).json({ meesage: "Invalid Input" });
       return;
@@ -21,11 +21,9 @@ export default function hendler(req, res) {
     };
 
     console.log("New Message: ", newMessage);
-    res
-      .status(201)
-      .json({
-        message: "Successfully Stored Message",
-        message: newMessage,
-      });
+
+    res.status(201).json({
+      message: "Successfully Stored Message",
+    });
   }
 }

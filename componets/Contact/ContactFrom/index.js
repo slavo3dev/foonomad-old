@@ -9,6 +9,7 @@ export function ContactForm() {
   function sendMessageHandle(event) {
     event.preventDefault();
 
+    
     fetch("/api/contact", {
       method: "POST",
       header: {
@@ -24,7 +25,7 @@ export function ContactForm() {
   return (
     <section className={classes.contact}>
       <h1>How can I help you?</h1>
-      <from className={classes.form} onSubmit={sendMessageHandle}>
+      <form className={classes.form} onSubmit={sendMessageHandle}>
         <div className={classes.controls}>
           <div className={classes.control}>
             <label htmlFor="email">Your Email</label>
@@ -33,7 +34,7 @@ export function ContactForm() {
               id="email"
               value={addEmail}
               required
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <div className={classes.control}>
@@ -43,7 +44,7 @@ export function ContactForm() {
               id="name"
               value={addName}
               required
-              onChange={(e) => setName(e.target.value)}
+              onChange={(event) => setName(event.target.value)}
             />
           </div>
         </div>
@@ -53,13 +54,13 @@ export function ContactForm() {
             rows="5"
             id="message"
             value={addMessage}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(event) => setMessage(event.target.value)}
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button type="submit">Send Message</button>
+          <button>Send Message</button>
         </div>
-      </from>
+      </form>
     </section>
   );
 }
