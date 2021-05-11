@@ -1,27 +1,60 @@
 import { useState } from "react";
 import classes from "./contactform.module.css";
-import Notification from "../ui/notification";
+import { sendContactData } from "../../../lib/fetch-util";
+import Notification from "../ui";
 
 export function ContactForm() {
   const [addEmail, setEmail] = useState("");
   const [addName, setName] = useState("");
   const [addMessage, setMessage] = useState("");
   const [reqStatus, setReqStatus] = useState(); // "Pending", "Success", "error"
+  const [reqErrorMessage, setReqErrorMessage] = useState();
 
-  function sendMessageHandle(event) {
+  async function sendMessageHandle(event) {
     event.preventDefault();
 
-    fetch("/api/contact", {
-      method: "POST",
-      header: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    setReqStatus("pending");
+
+    try {
+      await sendContactData({
         email: addEmail,
         name: addName,
         message: addMessage,
-      }),
-    });
+      });
+      setReqStatus("success");
+    } catch (error) {
+      setReqStatus("error");
+      setReqErrorMessage(error.message);
+      console.error("Something Went Wrong: ", error.message);
+    }
+  }
+
+  let notificationData;
+
+  if (reqStatus === "pending") {
+    notificationData = {
+      status: "pending",
+      title: "Sending message...",
+      message:
+        "We are submiting your request , please be patient for couple of seconds...",
+    };
+  }
+
+  if (reqStatus === "success") {
+    notificationData = {
+      status: "success",
+      title: "SUCCESS",
+      message:
+        "Message sent Successfully, we will get back to you ASAP!!",
+    };
+  }
+
+  if (reqStatus === "error") {
+    notificationData = {
+      status: "error",
+      title: "Something Went Wrong",
+      message: `Please re-fresh your page and try againg. Thank You\n${reqErrorMessage}`,
+    };
   }
   return (
     <section className={classes.contact}>
@@ -62,6 +95,9 @@ export function ContactForm() {
           <button>Send Message</button>
         </div>
       </form>
+      {notificationData && (
+        <Notification notification={notificationData} />
+      )}
     </section>
   );
 }
