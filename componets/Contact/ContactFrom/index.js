@@ -1,15 +1,16 @@
 import { useState } from "react";
 import classes from "./contactform.module.css";
+import Notification from "../ui/notification";
 
 export function ContactForm() {
   const [addEmail, setEmail] = useState("");
   const [addName, setName] = useState("");
   const [addMessage, setMessage] = useState("");
+  const [reqStatus, setReqStatus] = useState(); // "Pending", "Success", "error"
 
   function sendMessageHandle(event) {
     event.preventDefault();
 
-    
     fetch("/api/contact", {
       method: "POST",
       header: {
