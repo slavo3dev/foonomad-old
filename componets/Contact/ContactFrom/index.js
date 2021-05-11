@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./contactform.module.css";
 import { sendContactData } from "../../../lib/fetch-util";
-import Notification from "../ui";
+import { Notification } from "../../Ui";
 
 export function ContactForm() {
   const [addEmail, setEmail] = useState("");

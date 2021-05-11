@@ -2,7 +2,8 @@ import { MongoClient } from "mongodb";
 
 export default async function hendler(req, res) {
   if (req.method === "POST") {
-    const { email, name, message } = JSON.parse(req.body);
+    const { contactDetails } = JSON.parse(req.body);
+    const { email, name, message } = contactDetails;
 
     if (
       !email ||
