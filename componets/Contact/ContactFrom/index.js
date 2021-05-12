@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classes from "./contactform.module.css";
 import { sendContactData } from "../../../lib/fetch-util";
 import { Notification } from "../../Ui";
@@ -9,6 +9,17 @@ export function ContactForm() {
   const [addMessage, setMessage] = useState("");
   const [reqStatus, setReqStatus] = useState(); // "Pending", "Success", "error"
   const [reqErrorMessage, setReqErrorMessage] = useState();
+
+  useEffect(() => {
+    if (reqStatus === "success" || reqStatus === "error") {
+      const timer = setTimeout(() => {
+        setReqStatus(null);
+        setReqErrorMessage(null);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [reqStatus, reqErrorMessage]);
 
   async function sendMessageHandle(event) {
     event.preventDefault();
@@ -22,6 +33,9 @@ export function ContactForm() {
         message: addMessage,
       });
       setReqStatus("success");
+      setEmail("");
+      setMessage("");
+      setName("");
     } catch (error) {
       setReqStatus("error");
       setReqErrorMessage(error.message);
