@@ -27,7 +27,7 @@ export default async function hendler(req, res) {
 
     try {
       client = await MongoClient.connect(
-        "mongodb+srv://slavo3:Smimicom24011bg@mimicom24.wbdvr.mongodb.net/foonomaddb?retryWrites=true&w=majority",
+        `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_contact_cluster}.wbdvr.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`,
         { useNewUrlParser: true, useUnifiedTopology: true },
       );
     } catch (err) {
