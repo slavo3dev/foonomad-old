@@ -8,7 +8,7 @@
   isFeatured: true
 ---
 
-# Digital Nomad in few Steps
+# Digital Nomad Skills to Develop
 
 ### Digital nomads blend work with travel.
 
