@@ -14,6 +14,8 @@ import {
   ResultsTitle,
   ErrorAlert,
   ButtonEvents,
+  EventHeader,
+  LayoutEvent,
 } from "./EventComponent";
 
 export {
@@ -36,4 +38,6 @@ export {
   ResultsTitle,
   ErrorAlert,
   ButtonEvents,
+  EventHeader,
+  LayoutEvent,
 };

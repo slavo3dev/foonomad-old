@@ -14,6 +14,9 @@ import {
 
 import { ButtonEvents, ErrorAlert } from "./ui";
 
+import { LayoutEvent } from "./layout-events/layout-event";
+import { EventHeader } from "./layout-events/event-header";
+
 export {
   EventContent,
   EventLogistics,
@@ -25,4 +28,6 @@ export {
   ResultsTitle,
   ButtonEvents,
   ErrorAlert,
+  LayoutEvent,
+  EventHeader,
 };
