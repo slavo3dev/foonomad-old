@@ -16,7 +16,7 @@ import {
   ButtonEvents,
   EventHeader,
   LayoutEvent,
-} from "./EventComponent";
+} from "./eventComponent";
 
 export {
   Hero,
