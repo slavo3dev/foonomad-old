@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 import { Fragment } from "react";
 import { Hero, FeaturedPosts } from "../componets";
 import { getFeaturedPosts } from "../lib/posts-util";
+import { getFeaturedEvents } from "../dummy-data";
+import { EventList } from "../componets";
 
 export default function Home(props) {
   const { posts } = props;
+
+  const featuredEvents = getFeaturedEvents();
   return (
     <Fragment>
       <Head>
@@ -17,6 +21,7 @@ export default function Home(props) {
       </Head>
       <Hero />
       <FeaturedPosts posts={posts} />
+      <EventList items={featuredEvents} />
     </Fragment>
   );
 }
