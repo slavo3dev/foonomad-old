@@ -7,9 +7,9 @@ import {
   ResultsTitle,
   ButtonEvents,
   ErrorAlert,
-} from "../../components";
+} from "../../componets";
 
-function FilteredEventsPage() {
+export default function FilteredEventsPage() {
   const router = useRouter();
 
   const filterData = router.query.slug;
