@@ -18,6 +18,8 @@ import {
   LayoutEvent,
 } from "./eventComponent";
 
+import { InstagramImages } from "./InstagramImages";
+
 export {
   Hero,
   FeaturedPosts,
@@ -40,4 +42,5 @@ export {
   ButtonEvents,
   EventHeader,
   LayoutEvent,
+  InstagramImages,
 };
